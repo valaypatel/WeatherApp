@@ -89,6 +89,10 @@ public class MainActivity extends Activity implements URLDispatcherListener{
     public void dataReceived(JSONObject object) {
         try {
             Log.v(LOG_TAG,object.toString());
+            if(object.getString("cod").equals("404")) {
+                mErrorText.setText("City Not found !!!");
+                return;
+            }
             final DateListAdapter dateListAdapter = new DateListAdapter(this,this.getDaysData(object.getJSONArray("list")));
             runOnUiThread(new Runnable() {
                 @Override
