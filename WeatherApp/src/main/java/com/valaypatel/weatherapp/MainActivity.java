@@ -90,7 +90,15 @@ public class MainActivity extends Activity implements URLDispatcherListener{
         try {
             Log.v(LOG_TAG,object.toString());
             if(object.getString("cod").equals("404")) {
-                mErrorText.setText("City Not found !!!");
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mErrorText.setVisibility(View.VISIBLE);
+                        mErrorText.setText("City Not Found !!!!");
+                        mProgressBar.setVisibility(View.GONE);
+                        mListView.setVisibility(View.GONE);
+                    }
+                });
                 return;
             }
             final DateListAdapter dateListAdapter = new DateListAdapter(this,this.getDaysData(object.getJSONArray("list")));
