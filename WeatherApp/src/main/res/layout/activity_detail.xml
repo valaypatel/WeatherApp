@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".Detail">
+
+    <TextView android:id="@+id/date"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:text="Date Place Holder"
+              android:gravity="center"
+              android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:id="@+id/temp"
+                  android:layout_below="@id/date">
+        <TextView android:id="@+id/avgTemp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="Avg Temp" />
+        <TextView android:id="@+id/maxTemp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="Max Temp" />
+        <TextView android:id="@+id/minTemp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  android:layout_marginBottom="@dimen/activity_vertical_margin"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="Min Temp" />
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:id="@+id/others"
+                  android:layout_below="@id/temp">
+        <TextView android:id="@+id/humid"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="Humidity" />
+        <TextView android:id="@+id/speed"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="Speed" />
+        <TextView android:id="@+id/pressure"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  android:layout_marginBottom="@dimen/activity_vertical_margin"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="Pressure" />
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+
+                  android:layout_below="@id/others">
+        <TextView android:id="@+id/description"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/activity_vertical_margin"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="description" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
